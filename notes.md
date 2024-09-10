@@ -26,3 +26,43 @@ S3 will get to work right away!
 ### Step 3 :Configure a static website on Amazon S3
 
 We have to  set up the bucket for static website hosting because S3 can be used for so many solutions other than web hosting.
+
+If you're not sure, choose buckets on the left hand side navigation bar, and then choose the bucket you created for this project.
+Choose the Properties tab.
+Scroll allllllllll the way down to the Static website hosting panel.
+Choose Edit
+Configure the following settings:
+Static web hosting: Choose Enable
+Hosting type: Choose Host a static website
+
+Index document: Enter index.html
+
+Choose Save changes
+```
+Under Properties,
+In the Static website hosting panel
+ under bucket website endpoint,
+ click on the URL.
+```
+An error! 👀
+
+The error message you're seeing is telling you that your static website is being hosted by S3, but the actual HTML/image files you've uploaded are still private. It's kind of like having a bucket on display, so everyone can see the bucket - but the contents are covered up, preventing anyone from seeing what's inside.
+
+To solve this error, we need to set the permission of the objects to public - this is why we enabled ACLs in Task 1!
+
+### step 4: Use ACLs to make objects in your S3 bucket public
+
+Let's make the uploaded objects publicly accessible so users can view your website.
+
+
+Would you still remember how to view your S3 bucket's objects? Try finding your bucket's 
+ page and making your objects public using ACLs.
+
+.... feeling a little stuck?
+
+No worries! If you're stuck, head to the Objects tab.
+Select the checkboxes next to your index.html file and the folder of website assets.
+In the Actions dropdown, choose Make public using ACL.
+
+With this we make *** only the html file public, not the folder***. that's private.
+.
