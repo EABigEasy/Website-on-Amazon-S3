@@ -58,7 +58,7 @@ Let's make the uploaded objects publicly accessible so users can view your websi
 Would you still remember how to view your S3 bucket's objects? Try finding your bucket's 
  page and making your objects public using ACLs.
 
-````
+```
 select bucket.
 check all list of objects in bucket
 Select the checkboxes of index.html file and the folder of website assets.
