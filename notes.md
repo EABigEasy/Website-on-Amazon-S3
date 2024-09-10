@@ -58,11 +58,18 @@ Let's make the uploaded objects publicly accessible so users can view your websi
 Would you still remember how to view your S3 bucket's objects? Try finding your bucket's 
  page and making your objects public using ACLs.
 
-.... feeling a little stuck?
+````
+select bucket.
+check all list of objects in bucket
+Select the checkboxes of index.html file and the folder of website assets.
+In the Actions dropdown,
+choose Make public using ACL.
 
-No worries! If you're stuck, head to the Objects tab.
-Select the checkboxes next to your index.html file and the folder of website assets.
-In the Actions dropdown, choose Make public using ACL.
+```
 
 With this we make *** only the html file public, not the folder***. that's private.
-.
+
+### step 5: Delete Resources.
+
+Empty buckets by deleting the objects in the bucket, Then we delete the Bucket.
+
